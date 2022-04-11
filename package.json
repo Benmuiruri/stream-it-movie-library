@@ -4,7 +4,10 @@
   "description": "Javascript Capstone project built by [Ben Muiruri](https://github.com/Benmuiruri) and [Olawale Bamidele](https://github.com/olawalecoder)",
   "private": "true",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "watch": "webpack --watch",
+    "start": "webpack serve --open",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
@@ -25,6 +28,7 @@
     "eslint-plugin-import": "^2.26.0",
     "hint": "^6.1.11",
     "html-webpack-plugin": "^5.5.0",
+    "jest": "^27.5.1",
     "style-loader": "^3.3.1",
     "stylelint": "^13.13.1",
     "stylelint-config-standard": "^21.0.0",
