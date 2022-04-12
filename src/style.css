@@ -103,6 +103,22 @@ a {
 
 /* Movie wrapper section styles */
 
+.movie-section-title {
+  text-align: center;
+  color: #fff;
+  padding-bottom: 1.2em;
+}
+
+.movie-section-title span {
+  font-size: 1.15em;
+  font-weight: 700;
+}
+
+.fa-star {
+  color: #6ac045;
+  padding-right: 0.4em;
+}
+
 .movies {
   margin: 0 auto;
   width: 65%;
@@ -153,6 +169,7 @@ a {
 
 .movie-image {
   border: 4px solid #fff;
+  width: 100%;
 }
 
 /* Footer Styles */

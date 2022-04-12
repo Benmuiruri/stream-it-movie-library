@@ -6,10 +6,14 @@ const displayMovies = async (sampleMovies) => {
     movieWrapper.id = `movie_${movie.id}`;
     movieWrapper.className = 'movie-wrapper';
 
+    const movieImgDiv = document.createElement('div');
+    movieImgDiv.className = 'movie-image-div';
     const movieImg = document.createElement('img');
     movieImg.src = movie.image.medium;
     movieImg.className = 'movie-image';
-    movieWrapper.appendChild(movieImg);
+    movieImgDiv.appendChild(movieImg);
+    const movieImgOverlay = document.createElement('div');
+    movieWrapper.appendChild(movieImgDiv);
 
     const movieTitle = document.createElement('h3');
     movieTitle.textContent = `${movie.name}`;
