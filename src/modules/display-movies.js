@@ -1,0 +1,1 @@
+// Take the array from get movies and populate the movies section
