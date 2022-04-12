@@ -43,8 +43,6 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Background image: Photo by >Alex Litvin on Unsplash
-
 ## 📝 License
 
 This project is [MIT](https://opensource.org/licenses/MIT) licensed.
