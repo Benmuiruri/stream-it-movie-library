@@ -3,12 +3,19 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  font-family: 'Raleway', sans-serif;
+  background-color: #1d1d1d;
 }
 
 html {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+}
+
+main {
+  /* margin: 0 auto;
+  width: 55%; */
 }
 
 *,
@@ -22,12 +29,14 @@ html {
   box-sizing: border-box;
 }
 
-a { text-decoration: none; }
+a {
+  text-decoration: none;
+}
 
 /* Header Styles */
 
 .header {
-  background-color: #1D1D1D;
+  background-color: #1d1d1d;
   color: #919191;
 }
 
@@ -40,19 +49,64 @@ a { text-decoration: none; }
 .nav-ul li {
   list-style: none;
   margin-right: 65px;
-  padding: 16px;
-  margin-top: 5px;
+  padding: 1.1em 0;
 }
 
 .nav-ul li a {
   color: #919191;
   font-size: 1.2rem;
+  font-family: 'Poppins', sans-serif;
 }
 
 .title {
   border: 2px solid black;
   border-radius: 50%;
 }
+
+/* Call out styles */
+
+.callout {
+  /* background-image: url('./assets/movie.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat; */
+}
+
+.callout-content {
+  margin: 0 auto;
+  width: 55%;
+  height: 30vh;
+  color: #fff;
+}
+
+.callout-header {
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.75em;
+  font-weight: 700;
+  text-shadow: 0 2px 2px rgb(0 0 0 / 40%);
+  margin: 0.5em 0;
+}
+
+.callout-copy {
+  color: #ccc;
+  width: 65%;
+  margin: 0 auto;
+  line-height: 1.4em;
+  letter-spacing: 0.5px;
+  margin-bottom: 1.3em;
+  text-align: center;
+}
+
+.callout-info {
+  font-size: 1em;
+  color: #6ac045;
+  margin: 0 auto;
+  letter-spacing: 0.5px;
+  text-align: center;
+}
+
+
 
 /* Movie wrapper section styles */
 
