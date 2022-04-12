@@ -65,18 +65,13 @@ a {
 
 /* Call out styles */
 
-.callout {
-  /* background-image: url('./assets/movie.jpg');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat; */
-}
-
 .callout-content {
   margin: 0 auto;
   width: 55%;
-  height: 30vh;
   color: #fff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 2em;
+  margin-bottom: 2em;
 }
 
 .callout-header {
@@ -100,15 +95,20 @@ a {
 
 .callout-info {
   font-size: 1em;
+  font-weight: 700;
   color: #6ac045;
   margin: 0 auto;
   letter-spacing: 0.5px;
   text-align: center;
 }
 
-
-
 /* Movie wrapper section styles */
+
+.movies {
+  margin: 0 auto;
+  width: 55%;
+  color: #fff;
+}
 
 /* Footer Styles */
 footer {
