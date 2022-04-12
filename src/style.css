@@ -1,7 +1,7 @@
 body {
   min-height: 100vh;
-  display:flex; 
-  flex-direction:column; 
+  display: flex;
+  flex-direction: column;
 }
 
 html {
@@ -15,7 +15,6 @@ html {
 *::after {
   -webkit-box-sizing: inherit;
   -moz-box-sizing: inherit;
-  box-sizing: inherit;
   padding: 0;
   margin: 0;
   font-size: 14px;
@@ -28,7 +27,7 @@ html {
   margin: 40px 0;
 } */
 
-a {text-decoration: none;}
+a { text-decoration: none; }
 
 .nav-ul {
   display: flex;
@@ -54,8 +53,8 @@ a {text-decoration: none;}
 }
 
 footer {
-    margin-top: auto;
-    background: #c1c7d0b9;
+  margin-top: auto;
+  background: #c1c7d0b9;
 }
 
 footer p {
