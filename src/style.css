@@ -1,3 +1,9 @@
+body {
+  min-height: 100vh;
+  display:flex; 
+  flex-direction:column; 
+}
+
 html {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -13,8 +19,47 @@ html {
   padding: 0;
   margin: 0;
   font-size: 14px;
+  box-sizing: border-box;
 }
 
-.header {
+/* header {
   color: red;
+  height: 10vh;
+  margin: 40px 0;
+} */
+
+a {text-decoration: none;}
+
+.nav-ul {
+  display: flex;
+  width: 80%;
+  margin: 10px auto;
+}
+
+.nav-ul li {
+  list-style: none;
+  margin-right: 65px;
+  padding: 16px;
+  margin-top: 5px;
+}
+
+.nav-ul li a {
+  color: #333;
+  font-size: 1.2rem;
+}
+
+.title {
+  border: 2px solid black;
+  border-radius: 50%;
+}
+
+footer {
+    margin-top: auto;
+    background: #c1c7d0b9;
+}
+
+footer p {
+  padding: 10px;
+  text-align: center;
+  font-size: 1.2rem;
 }
