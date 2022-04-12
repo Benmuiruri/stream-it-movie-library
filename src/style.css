@@ -146,7 +146,7 @@ a {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.6);
-  color: #ffffff;
+  color: #fff;
   font-family: 'Raleway', sans-serif;
   display: flex;
   flex-direction: column;
@@ -170,7 +170,6 @@ a {
 }
 
 .movie-image {
-
   display: block;
   width: 100%;
 }
