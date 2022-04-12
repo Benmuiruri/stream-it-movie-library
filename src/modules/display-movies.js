@@ -1,10 +1,10 @@
 const movieContainer = document.querySelector('.movies');
 
 const displayMovies = async (sampleMovies) => {
-  sampleMovies.forEach((movie, i) => {
+  sampleMovies.forEach((movie) => {
     const movieWrapper = document.createElement('div');
-    movieWrapper.id = `movie_${i.id}`;
-    movieWrapper.className = 'movies-wrapper';
+    movieWrapper.id = `movie_${movie.id}`;
+    movieWrapper.className = 'movie-wrapper';
 
     const movieImg = document.createElement('img');
     movieImg.src = movie.image.medium;
