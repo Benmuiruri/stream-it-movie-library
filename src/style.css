@@ -1,3 +1,4 @@
+/* Global Styles */
 body {
   min-height: 100vh;
   display: flex;
@@ -21,13 +22,9 @@ html {
   box-sizing: border-box;
 }
 
-/* header {
-  color: red;
-  height: 10vh;
-  margin: 40px 0;
-} */
-
 a { text-decoration: none; }
+
+/* Header Styles */
 
 .nav-ul {
   display: flex;
@@ -52,6 +49,9 @@ a { text-decoration: none; }
   border-radius: 50%;
 }
 
+/* Movie wrapper section styles */
+
+/* Footer Styles */
 footer {
   margin-top: auto;
   background: #c1c7d0b9;
