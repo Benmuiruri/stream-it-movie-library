@@ -26,6 +26,11 @@ a { text-decoration: none; }
 
 /* Header Styles */
 
+.header {
+  background-color: #1D1D1D;
+  color: #919191;
+}
+
 .nav-ul {
   display: flex;
   width: 80%;
@@ -40,7 +45,7 @@ a { text-decoration: none; }
 }
 
 .nav-ul li a {
-  color: #333;
+  color: #919191;
   font-size: 1.2rem;
 }
 
