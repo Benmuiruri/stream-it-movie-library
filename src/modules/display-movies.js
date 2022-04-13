@@ -1,3 +1,5 @@
+import { getLikes, postLike } from './likes-handler.js';
+
 const movieContainer = document.querySelector('.movies');
 
 const displayMovies = async (sampleMovies) => {
@@ -68,6 +70,11 @@ const displayMovies = async (sampleMovies) => {
     movieWrapper.appendChild(commentBtn);
 
     movieContainer.appendChild(movieWrapper);
+    likeBtn.addEventListener('click', async (e) => {
+      await postLike(e.target.id);
+      const data = await getLikes();
+      console.log(data);
+    });
   });
 };
 
