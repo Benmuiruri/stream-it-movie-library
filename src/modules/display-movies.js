@@ -1,15 +1,46 @@
 const movieContainer = document.querySelector('.movies');
 
 const displayMovies = async (sampleMovies) => {
-  sampleMovies.forEach((movie, i) => {
+  sampleMovies.forEach((movie) => {
     const movieWrapper = document.createElement('div');
-    movieWrapper.id = `movie_${i.id}`;
-    movieWrapper.className = 'movies-wrapper';
+    movieWrapper.id = `movie_${movie.id}`;
+    movieWrapper.className = 'movie-wrapper';
+
+    const movieImgDiv = document.createElement('div');
+    movieImgDiv.className = 'movie-image-div';
 
     const movieImg = document.createElement('img');
     movieImg.src = movie.image.medium;
     movieImg.className = 'movie-image';
-    movieWrapper.appendChild(movieImg);
+    movieImgDiv.appendChild(movieImg);
+
+    const movieImgOverlay = document.createElement('div');
+    movieImgOverlay.className = 'details-overlay';
+    const ratingStar = document.createElement('i');
+    ratingStar.classList.add('fa-solid');
+    ratingStar.classList.add('fa-star');
+    ratingStar.classList.add('overlay-star');
+    const movieRating = document.createElement('span');
+    movieRating.className = 'movie-overlay-rating';
+    if (movie.rating.average) {
+      movieRating.innerHTML = `${movie.rating.average} / 10`;
+    } else {
+      movieRating.innerHTML = '0 / 10';
+    }
+    const movieGenre = document.createElement('span');
+    movieGenre.className = 'movie-overlay-genre';
+    movieGenre.innerHTML = `${movie.genres[0]}`;
+    const movieDetailsBtn = document.createElement('button');
+    movieDetailsBtn.className = 'ovelay-details-btn';
+    movieDetailsBtn.innerHTML = 'View Details';
+
+    movieImgOverlay.appendChild(ratingStar);
+    movieImgOverlay.appendChild(movieRating);
+    movieImgOverlay.appendChild(movieGenre);
+    movieImgOverlay.appendChild(movieDetailsBtn);
+    movieImgDiv.appendChild(movieImgOverlay);
+
+    movieWrapper.appendChild(movieImgDiv);
 
     const movieTitle = document.createElement('h3');
     movieTitle.textContent = `${movie.name}`;
