@@ -1,6 +1,8 @@
+import { getLikes, postLike, updateLikes } from './likes-handler.js';
+
 const movieContainer = document.querySelector('.movies');
 
-const displayMovies = async (sampleMovies) => {
+const displayMovies = (sampleMovies) => {
   sampleMovies.forEach((movie) => {
     const movieWrapper = document.createElement('div');
     movieWrapper.id = `movie_${movie.id}`;
@@ -34,10 +36,12 @@ const displayMovies = async (sampleMovies) => {
     movieDetailsBtn.className = 'ovelay-details-btn';
     movieDetailsBtn.innerHTML = 'View Details';
 
-    movieImgOverlay.appendChild(ratingStar);
-    movieImgOverlay.appendChild(movieRating);
-    movieImgOverlay.appendChild(movieGenre);
-    movieImgOverlay.appendChild(movieDetailsBtn);
+    movieImgOverlay.append(
+      ratingStar,
+      movieRating,
+      movieGenre,
+      movieDetailsBtn,
+    );
     movieImgDiv.appendChild(movieImgOverlay);
 
     movieWrapper.appendChild(movieImgDiv);
@@ -52,13 +56,12 @@ const displayMovies = async (sampleMovies) => {
     const likeBtn = document.createElement('i');
     likeBtn.classList.add('fa-solid');
     likeBtn.classList.add('fa-heart');
-    likeBtn.style.cursor = 'pointer';
     likeBtn.id = `${movieWrapper.id}`;
     likesContainer.appendChild(likeBtn);
 
     const movieLikes = document.createElement('span');
     movieLikes.className = 'movie-likes';
-    movieLikes.textContent = '3 likes';
+    movieLikes.textContent = '0 likes';
     likesContainer.appendChild(movieLikes);
     movieWrapper.appendChild(likesContainer);
 
@@ -67,7 +70,20 @@ const displayMovies = async (sampleMovies) => {
     commentBtn.className = 'commentBtn';
     movieWrapper.appendChild(commentBtn);
 
+    const popLikes = async () => {
+      const resArray = await getLikes();
+      updateLikes(likeBtn, resArray, movieLikes);
+    };
+
     movieContainer.appendChild(movieWrapper);
+    likeBtn.addEventListener('click', async (e) => {
+      const movie = e.target;
+      // @ts-ignore
+      await postLike(movie.id);
+      const resArray = await getLikes();
+      updateLikes(movie, resArray, movieLikes);
+    });
+    popLikes();
   });
 };
 
