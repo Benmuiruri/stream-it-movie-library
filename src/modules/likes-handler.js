@@ -20,7 +20,7 @@ const getLikes = async () => {
 
 const updateLikes = (movie, resArray, movieLikes) => {
   resArray.forEach((element) => {
-    if (element.item_id === movie) {
+    if (element.item_id === movie.id) {
       movieLikes.innerHTML = `${element.likes} likes`;
     }
   });

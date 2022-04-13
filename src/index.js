@@ -1,7 +1,7 @@
 import './style.css';
-import getMovies from './modules/get-movies';
-import displayMovies from './modules/display-movies';
-import movieModal from './modules/movie-modal';
+import getMovies from './modules/get-movies.js';
+import displayMovies from './modules/display-movies.js';
+import movieModal from './modules/movie-modal.js';
 
 window.addEventListener('load', async () => {
   const movies = await getMovies();
