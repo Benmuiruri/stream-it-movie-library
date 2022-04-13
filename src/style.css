@@ -221,6 +221,10 @@ a {
   align-items: center;
 }
 
+.fa-heart {
+  cursor: pointer;
+}
+
 .movie-likes {
   padding-left: 0.5em;
 }
@@ -239,6 +243,38 @@ a {
 
 .commentBtn:hover {
   box-shadow: 0 8px 16px rgba(54, 179, 127, 0.24);
+}
+
+/* Movie Modal styles */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(193, 199, 208, 0.8);
+  cursor: pointer;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.35s ease-in;
+}
+
+.modal.is-visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal-dialog {
+  width: 55vw;
+  height: 95%;
+  border-radius: 5px;
+  background: #fff;
+  overflow: auto;
+  cursor: default;
+  margin: 5em;
 }
 
 /* Footer Styles */
