@@ -70,7 +70,6 @@ const displayMovies = async (sampleMovies) => {
       const movie = e.target;
       await postLike(movie.id);
       const resArray = await getLikes();
-      console.log(resArray);
       updateLikes(movie, resArray, movieLikes);
     });
   });
