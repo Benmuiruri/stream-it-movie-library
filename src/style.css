@@ -313,7 +313,7 @@ a {
   font-family: inherit;
 }
 
-.popUp button:hover {
+.popUp-button:hover {
   outline: 0;
   background-color: #002400;
   border: 2px solid #6ac045;
@@ -391,7 +391,7 @@ a {
   width: 30px;
   height: 30px;
   border: 2px solid #555;
-  color: #1d1d1d;
+  color: #ffffff;
   position: relative;
   top: 0;
   left: 0;
@@ -427,7 +427,6 @@ a {
   right: 5px;
   transform: rotate(45deg);
 }
-
 
 /* Footer Styles */
 footer {
