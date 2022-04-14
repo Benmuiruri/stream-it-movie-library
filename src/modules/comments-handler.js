@@ -1,12 +1,11 @@
 // @ts-ignore
-// const URL =
-//   'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi';
-// const appID = 'z8ysUFZMtLxIv6OBwEl9';
-// const endPoint = `${URL}/apps/${appID}/comments/`;
+const URL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi';
+const appID = 'z8ysUFZMtLxIv6OBwEl9';
+const endPoint = `${URL}/apps/${appID}/comments/`;
 
 const postComment = async (buttonId, userName, userComment) => {
   const res = await fetch(
-    'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/z8ysUFZMtLxIv6OBwEl9/comments',
+    endPoint,
     {
       method: 'POST',
       body: JSON.stringify({
@@ -23,9 +22,7 @@ const postComment = async (buttonId, userName, userComment) => {
 };
 
 const getComments = async (button) => {
-  const response = await fetch(
-    `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/z8ysUFZMtLxIv6OBwEl9/comments?item_id=${button}`,
-  );
+  const response = await fetch(`${endPoint}?item_id=${button}`);
   return response.json();
 };
 
