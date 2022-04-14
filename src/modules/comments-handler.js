@@ -1,6 +1,5 @@
 // @ts-ignore
-const URL =
-  'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi';
+const URL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi';
 const appID = 'z8ysUFZMtLxIv6OBwEl9';
 const endPoint = `${URL}/apps/${appID}/comments/`;
 
@@ -81,4 +80,6 @@ const countComments = (element, comments) => {
   }
 };
 
-export { postComment, getComments, displayComments, countComments };
+export {
+  postComment, getComments, displayComments, countComments,
+};

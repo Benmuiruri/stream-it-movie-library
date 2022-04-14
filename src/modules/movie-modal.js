@@ -29,8 +29,7 @@ const movieModal = async (commentButtons, sampleMovies) => {
       movieImg.src = `${sampleMovies[i].image.original}`;
       buttonDiv.className = 'buttonDiv';
       movieDownloadBtn.className = 'popUp-button';
-      movieDownloadBtn.innerHTML =
-        '<i class="fa-solid fa-angles-down"></i>Download';
+      movieDownloadBtn.innerHTML = '<i class="fa-solid fa-angles-down"></i>Download';
       movieWatchBtn.className = 'popUp-button';
       movieWatchBtn.innerHTML = 'Watch Now';
       movieImgDiv.appendChild(movieImg);
@@ -59,8 +58,7 @@ const movieModal = async (commentButtons, sampleMovies) => {
       movieNetwork.innerHTML = '';
       movieNetwork.className = '';
       downloadSubtitle.href = '#';
-      downloadSubtitle.innerHTML =
-        '<i class="fa-solid fa-angles-down"></i> Download Subtitles';
+      downloadSubtitle.innerHTML = '<i class="fa-solid fa-angles-down"></i> Download Subtitles';
       downloadSubtitle.className = 'subtitle-button';
       ratingStar.classList.add('fa-solid');
       ratingStar.classList.add('fa-star');
@@ -171,7 +169,7 @@ const movieModal = async (commentButtons, sampleMovies) => {
           readMore.innerHTML = 'Read More';
           movieSummary.innerHTML = `${sampleMovies[i].summary.substring(
             0,
-            400
+            400,
           )}`;
         }
       });
