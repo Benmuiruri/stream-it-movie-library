@@ -50,7 +50,7 @@ const movieModal = async (commentButtons, sampleMovies) => {
       movieGenre.className = 'popUp-Genre';
       movieReleaseDate.innerHTML = `${sampleMovies[i].premiered}`;
       movieReleaseDate.className = 'popUp-releaseDate';
-      movieNetwork.innHTML = '';
+      movieNetwork.innerHTML = '';
       movieNetwork.className = '';
       downloadSubtitle.href = '#';
       downloadSubtitle.innerHTML = '<i class="fa-solid fa-angles-down"></i> Download Subtitles';
@@ -144,7 +144,7 @@ const movieModal = async (commentButtons, sampleMovies) => {
       });
 
       commentSection.append(formDiv, commentsDiv);
-      insideDiv.appendChild(commentSection);
+      popUpDiv.appendChild(commentSection);
       // Read more button
       const readMore = document.createElement('button');
       readMore.innerHTML = 'Read More';
