@@ -24,7 +24,7 @@ const postComment = async (buttonId, userName, userComment) => {
 
 const getComments = async (button) => {
   const response = await fetch(
-    `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/z8ysUFZMtLxIv6OBwEl9/comments?item_id=${button}`
+    `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/z8ysUFZMtLxIv6OBwEl9/comments?item_id=${button}`,
   );
   return response.json();
 };

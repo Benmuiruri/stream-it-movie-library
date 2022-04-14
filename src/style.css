@@ -294,12 +294,13 @@ a {
   flex-direction: row;
   background-color: #171717;
   padding: 1em;
-  
 }
+
 .author-thumbnail {
   flex: none;
   margin-right: 12px;
 }
+
 .user-name-link {
   background-color: #00579c;
   border-radius: 99px;
@@ -313,22 +314,27 @@ a {
   text-decoration: none;
   width: 1.6em;
 }
+
 .user-name-link span {
   vertical-align: middle;
 }
+
 .comment-main {
   display: flex;
   flex: 1;
   flex-direction: column;
 }
+
 #comment-header {
   margin-bottom: 2px;
 }
+
 #header-author {
   display: flex;
   flex-direction: row;
   align-items: baseline;
 }
+
 #author-text {
   margin-right: 10px;
   color: #919191;
@@ -337,12 +343,14 @@ a {
   font-size: 12px;
   font-weight: 500;
 }
+
 #comment-date {
   color: #606060;
   font-family: 'Roboto', 'Arial', sans-serif;
   font-size: 11px;
   font-weight: 400;
 }
+
 #comment-text {
   color: #fff;
   word-wrap: break-word;
