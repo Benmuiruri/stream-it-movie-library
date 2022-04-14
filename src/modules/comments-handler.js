@@ -1,23 +1,21 @@
 // @ts-ignore
-const URL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi';
+const URL =
+  'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi';
 const appID = 'z8ysUFZMtLxIv6OBwEl9';
 const endPoint = `${URL}/apps/${appID}/comments/`;
 
 const postComment = async (buttonId, userName, userComment) => {
-  const res = await fetch(
-    endPoint,
-    {
-      method: 'POST',
-      body: JSON.stringify({
-        item_id: buttonId,
-        username: userName.value,
-        comment: userComment.value,
-      }),
-      headers: {
-        'Content-type': 'application/json; Charset=UTF-8',
-      },
+  const res = await fetch(endPoint, {
+    method: 'POST',
+    body: JSON.stringify({
+      item_id: buttonId,
+      username: userName.value,
+      comment: userComment.value,
+    }),
+    headers: {
+      'Content-type': 'application/json; Charset=UTF-8',
     },
-  );
+  });
   return res.text();
 };
 
@@ -28,7 +26,6 @@ const getComments = async (button) => {
 
 const displayComments = (commentsDiv, comments) => {
   if (comments.length >= 1) {
-    commentsDiv.innerHTML = '';
     comments.forEach((comment) => {
       // Create comment container to hold thumnail div and main comment div
       const commentContainer = document.createElement('div');
@@ -70,9 +67,18 @@ const displayComments = (commentsDiv, comments) => {
       // append both thumnail div and main comment div inside comment container
       commentContainer.append(userThumbnail, commentMain);
       // append individual comment containers into the comments div
-      commentsDiv.appendChild(commentContainer);
+      commentsDiv.append(commentContainer);
     });
   }
 };
 
-export { postComment, getComments, displayComments };
+const getCommentsCount = (element, comments) => {
+  element.textContent = '';
+  if (comments.length >= 1) {
+    element.textContent = `${comments.length} Comments`;
+  } else {
+    element.textContent = 'O Comments';
+  }
+};
+
+export { postComment, getComments, displayComments, getCommentsCount };

@@ -1,4 +1,9 @@
-import { postComment, getComments, displayComments } from './comments-handler';
+import {
+  postComment,
+  getComments,
+  displayComments,
+  getCommentsCount,
+} from './comments-handler';
 
 const isVisible = 'is-visible';
 
@@ -24,7 +29,8 @@ const movieModal = async (commentButtons, sampleMovies) => {
       movieImg.src = `${sampleMovies[i].image.original}`;
       buttonDiv.className = 'buttonDiv';
       movieDownloadBtn.className = 'popUp-button';
-      movieDownloadBtn.innerHTML = '<i class="fa-solid fa-angles-down"></i>Download';
+      movieDownloadBtn.innerHTML =
+        '<i class="fa-solid fa-angles-down"></i>Download';
       movieWatchBtn.className = 'popUp-button';
       movieWatchBtn.innerHTML = 'Watch Now';
       movieImgDiv.appendChild(movieImg);
@@ -53,7 +59,8 @@ const movieModal = async (commentButtons, sampleMovies) => {
       movieNetwork.innerHTML = '';
       movieNetwork.className = '';
       downloadSubtitle.href = '#';
-      downloadSubtitle.innerHTML = '<i class="fa-solid fa-angles-down"></i> Download Subtitles';
+      downloadSubtitle.innerHTML =
+        '<i class="fa-solid fa-angles-down"></i> Download Subtitles';
       downloadSubtitle.className = 'subtitle-button';
       ratingStar.classList.add('fa-solid');
       ratingStar.classList.add('fa-star');
@@ -83,6 +90,7 @@ const movieModal = async (commentButtons, sampleMovies) => {
       closeModalBtn.addEventListener('click', () => {
         modal.classList.remove('is-visible');
       });
+
       // Comments
       const commentSection = document.createElement('section');
       commentSection.className = 'comment-section';
@@ -114,6 +122,10 @@ const movieModal = async (commentButtons, sampleMovies) => {
       const commentsDiv = document.createElement('div');
       commentsDiv.className = 'display-comments';
       const comments = await getComments(commentBtn.id);
+      const commentsCount = document.createElement('h3');
+      commentsCount.className = 'comments-count';
+      commentsDiv.append(commentsCount);
+      getCommentsCount(commentsCount, comments);
       // Call display comments function
       displayComments(commentsDiv, comments);
       // Comment button action
@@ -138,6 +150,7 @@ const movieModal = async (commentButtons, sampleMovies) => {
           }, 2000);
           await postComment(commentBtn.id, userName, userComment);
           const myComments = await getComments(commentBtn.id);
+          getCommentsCount(commentsCount, myComments);
           displayComments(commentsDiv, myComments);
           commentForm.reset();
         }
@@ -156,7 +169,10 @@ const movieModal = async (commentButtons, sampleMovies) => {
           movieSummary.innerHTML = `${sampleMovies[i].summary}`;
         } else {
           readMore.innerHTML = 'Read More';
-          movieSummary.innerHTML = `${sampleMovies[i].summary.substring(0, 400)}`;
+          movieSummary.innerHTML = `${sampleMovies[i].summary.substring(
+            0,
+            400
+          )}`;
         }
       });
       // Add modal to body
