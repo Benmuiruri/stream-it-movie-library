@@ -140,6 +140,14 @@ a {
   padding-right: 0.4em;
 }
 
+.movie-list {
+  padding: 1em 0;
+}
+
+.movie-list span {
+  color: #6ac045;
+}
+
 .movies {
   margin: 0 auto;
   width: 65%;
@@ -435,8 +443,14 @@ a {
   background-color: #1d1d1d;
 }
 
+.comments-count {
+  color: #fff;
+}
+
 .display-comments {
   width: 50%;
+  display: flex;
+  flex-direction: column;
 }
 
 .comment-container {

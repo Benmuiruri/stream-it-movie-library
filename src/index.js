@@ -8,6 +8,9 @@ window.addEventListener('load', async () => {
   const sampleMovies = movies.slice(0, 48);
   await displayMovies(sampleMovies);
 
+  const movieList = document.querySelector('.movie-list');
+  movieList.innerHTML = `We currently have <span> ${sampleMovies.length} <span> movies`;
+
   const commentButtons = [...document.querySelectorAll('.commentBtn')];
   movieModal(commentButtons, sampleMovies);
 });
