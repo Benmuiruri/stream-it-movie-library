@@ -1,3 +1,5 @@
+import { postComment, getComments, displayComments } from './comments-handler';
+
 const isVisible = 'is-visible';
 
 const movieModal = async (commentButtons, sampleMovies) => {
@@ -48,7 +50,7 @@ const movieModal = async (commentButtons, sampleMovies) => {
       movieGenre.className = 'popUp-Genre';
       movieReleaseDate.innerHTML = `${sampleMovies[i].premiered}`;
       movieReleaseDate.className = 'popUp-releaseDate';
-      movieNetwork.innHTML = '';
+      movieNetwork.innerHTML = '';
       movieNetwork.className = '';
       downloadSubtitle.href = '#';
       downloadSubtitle.innerHTML = '<i class="fa-solid fa-angles-down"></i> Download Subtitles';
@@ -81,7 +83,68 @@ const movieModal = async (commentButtons, sampleMovies) => {
       closeModalBtn.addEventListener('click', () => {
         modal.classList.remove('is-visible');
       });
+      // Comments
+      const commentSection = document.createElement('section');
+      commentSection.className = 'comment-section';
+      const formDiv = document.createElement('div');
+      formDiv.className = 'add-comment';
+      const formHeaderDiv = document.createElement('div');
+      formHeaderDiv.className = 'add-comment-header';
+      const formHeader = document.createElement('h2');
+      formHeader.textContent = 'Add your comment';
+      formHeaderDiv.appendChild(formHeader);
+      // Actual form
+      const commentForm = document.createElement('form');
+      commentForm.className = 'add-comment-form';
+      // Form elements
+      const userName = document.createElement('input');
+      userName.className = 'user-name';
+      userName.placeholder = 'Username...';
+      const userComment = document.createElement('textarea');
+      userComment.className = 'user-comment';
+      userComment.placeholder = 'Share your comments ...';
+      const commentBtn = document.createElement('button');
+      commentBtn.className = 'comment-btn';
+      commentBtn.textContent = 'Submit Comment';
+      commentBtn.id = `movie_cmt_${sampleMovies[i].id}`;
+      commentForm.append(userName, userComment, commentBtn);
+      formDiv.append(formHeaderDiv, commentForm);
 
+      // Display comments
+      const commentsDiv = document.createElement('div');
+      commentsDiv.className = 'display-comments';
+      const comments = await getComments(commentBtn.id);
+      // Call display comments function
+      displayComments(commentsDiv, comments);
+      // Comment button action
+      commentBtn.addEventListener('click', async (e) => {
+        const resMsg = document.createElement('span');
+        if (userName.value === '' || userComment.value === '') {
+          e.preventDefault();
+          resMsg.className = 'error-msg';
+          resMsg.innerText = 'Please fill out your Username and add a comment';
+          commentBtn.parentNode.insertBefore(resMsg, commentBtn);
+          setTimeout(() => {
+            commentForm.removeChild(resMsg);
+          }, 2000);
+          // console.log(userName.value);
+        } else {
+          e.preventDefault();
+          resMsg.className = 'success-msg';
+          resMsg.innerText = 'Successfully added your comment';
+          commentBtn.parentNode.insertBefore(resMsg, commentBtn);
+          setTimeout(() => {
+            commentForm.removeChild(resMsg);
+          }, 2000);
+          await postComment(commentBtn.id, userName, userComment);
+          const myComments = await getComments(commentBtn.id);
+          displayComments(commentsDiv, myComments);
+          commentForm.reset();
+        }
+      });
+
+      commentSection.append(formDiv, commentsDiv);
+      popUpDiv.appendChild(commentSection);
       // Read more button
       const readMore = document.createElement('button');
       readMore.innerHTML = 'Read More';
@@ -96,7 +159,6 @@ const movieModal = async (commentButtons, sampleMovies) => {
           movieSummary.innerHTML = `${sampleMovies[i].summary.substring(0, 400)}`;
         }
       });
-
       // Add modal to body
       document.body.appendChild(modal);
     });
