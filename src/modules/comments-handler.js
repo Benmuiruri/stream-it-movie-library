@@ -72,7 +72,7 @@ const displayComments = (commentsDiv, comments) => {
   }
 };
 
-const getCommentsCount = (element, comments) => {
+const countComments = (element, comments) => {
   element.textContent = '';
   if (comments.length >= 1) {
     element.textContent = `${comments.length} Comments`;
@@ -81,4 +81,4 @@ const getCommentsCount = (element, comments) => {
   }
 };
 
-export { postComment, getComments, displayComments, getCommentsCount };
+export { postComment, getComments, displayComments, countComments };

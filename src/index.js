@@ -5,7 +5,7 @@ import movieModal from './modules/movie-modal.js';
 
 window.addEventListener('load', async () => {
   const movies = await getMovies();
-  const sampleMovies = movies.slice(0, 36);
+  const sampleMovies = movies.slice(0, 48);
   await displayMovies(sampleMovies);
 
   const movieList = document.querySelector('.movie-list');

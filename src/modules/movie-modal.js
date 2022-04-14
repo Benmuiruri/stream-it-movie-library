@@ -2,7 +2,7 @@ import {
   postComment,
   getComments,
   displayComments,
-  getCommentsCount,
+  countComments,
 } from './comments-handler';
 
 const isVisible = 'is-visible';
@@ -125,7 +125,7 @@ const movieModal = async (commentButtons, sampleMovies) => {
       const commentsCount = document.createElement('h3');
       commentsCount.className = 'comments-count';
       commentsDiv.append(commentsCount);
-      getCommentsCount(commentsCount, comments);
+      countComments(commentsCount, comments);
       // Call display comments function
       displayComments(commentsDiv, comments);
       // Comment button action
@@ -150,7 +150,7 @@ const movieModal = async (commentButtons, sampleMovies) => {
           }, 2000);
           await postComment(commentBtn.id, userName, userComment);
           const myComments = await getComments(commentBtn.id);
-          getCommentsCount(commentsCount, myComments);
+          countComments(commentsCount, myComments);
           displayComments(commentsDiv, myComments);
           commentForm.reset();
         }
