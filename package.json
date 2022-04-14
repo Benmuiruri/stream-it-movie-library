@@ -22,6 +22,7 @@
   "homepage": "https://github.com/Benmuiruri/stream-it-capstone#readme",
   "devDependencies": {
     "@babel/plugin-syntax-top-level-await": "^7.14.5",
+    "@babel/plugin-transform-modules-commonjs": "^7.17.9",
     "babel-eslint": "^10.1.0",
     "css-loader": "^6.7.1",
     "eslint": "^7.32.0",

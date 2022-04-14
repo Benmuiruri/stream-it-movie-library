@@ -25,6 +25,7 @@ const getComments = async (button) => {
 
 const displayComments = (commentsDiv, comments) => {
   if (comments.length >= 1) {
+    commentsDiv.innerHTML = `<h3 class=comments-count> ${comments.length} Comments</h3>`;
     comments.forEach((comment) => {
       // Create comment container to hold thumnail div and main comment div
       const commentContainer = document.createElement('div');
