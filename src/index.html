@@ -16,14 +16,18 @@
   <body>
     <header class="header">
       <nav>
+        <img src="/src/logo-icon.png" alt="logo icon"/>
         <ul class="nav-ul">
           <li class="link title"><a href="#">Stream-It</a></li>
           <li><a class="link shows active" href="#">Movies</a></li>
           <li><a class="link contact" href="#">Contact Us</a></li>
         </ul>
       </nav>
+      <form id="idform">
+        <input type="text" placeholder="search" id="search" class="search" />
+      </form>
     </header>
-    <main>
+    <main>    
       <div class="callout">
         <div class="callout-content">
           <h1 class="callout-header">
@@ -39,7 +43,7 @@
       </div>
       <section class="movies-section">
         <h2 class="movie-section-title">
-          <i class="fa-solid fa-star"></i> <span>Popular Movies</span> 
+          <i class="fa-solid fa-star"></i> <span>Popular Movies</span>
         </h2>
         <div class="movies"></div>
       </section>
