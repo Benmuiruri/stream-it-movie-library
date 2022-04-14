@@ -277,6 +277,117 @@ a {
   margin: 5em;
 }
 
+/* Modal comments styles */
+.comment-section {
+  display: flex;
+  flex-direction: row;
+  background-color: #1d1d1d;
+}
+
+.display-comments {
+  width: 50%;
+}
+
+.comment-container {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  background-color: #171717;
+  padding: 1em;
+  
+}
+.author-thumbnail {
+  flex: none;
+  margin-right: 12px;
+}
+.user-name-link {
+  background-color: #00579c;
+  border-radius: 99px;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1.8em;
+  padding-top: 10px;
+  text-align: center;
+  text-decoration: none;
+  width: 1.6em;
+}
+.user-name-link span {
+  vertical-align: middle;
+}
+.comment-main {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+#comment-header {
+  margin-bottom: 2px;
+}
+#header-author {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
+#author-text {
+  margin-right: 10px;
+  color: #919191;
+  margin-bottom: 2px;
+  display: block;
+  font-size: 12px;
+  font-weight: 500;
+}
+#comment-date {
+  color: #606060;
+  font-family: 'Roboto', 'Arial', sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+}
+#comment-text {
+  color: #fff;
+  word-wrap: break-word;
+  font-size: 14px;
+  height: 20px;
+  line-height: 1.4rem;
+  font-weight: 400;
+}
+
+/* Comment form styles */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  background-color: #1e4f63;
+  padding: 2em;
+  border-radius: 10px;
+}
+
+input,
+textarea {
+  font-family: 'Poppins', sans-serif;
+  color: #000;
+  font-weight: bold;
+  padding: 0.4em;
+  margin-bottom: 1em;
+  border-radius: 8px;
+}
+
+.comment-btn {
+  color: #000;
+  align-items: center;
+  padding: 0 8px;
+  background: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0.1rem 0.1rem black;
+  border-radius: 8px;
+}
+
+.btn-submit:active {
+  background: #52b7d4;
+  transform: translateY(2px);
+}
+
 /* Footer Styles */
 footer {
   margin-top: auto;
