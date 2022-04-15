@@ -16,12 +16,14 @@
   <body>
     <header class="header">
       <nav>
-        <ul class="nav-ul">
-          <li class="link title"><a href="#">Stream-It</a></li>
-          <li><a class="link shows active" href="#">Movies</a></li>
-          <li><a class="link contact" href="#">Contact Us</a></li>
-        </ul>
+        <div class="logo-img">
+          <img src="./assets/movie-icon.png" alt="" />
+          <a href="#" class="header-link"><span>Stream</span>-It</a>
+        </div>
       </nav>
+      <form id="idform">
+        <input type="text" placeholder="search" id="search" class="search" />
+      </form>
     </header>
     <main>
       <div class="callout">
@@ -38,14 +40,15 @@
         </div>
       </div>
       <section class="movies-section">
-        <h2 class="movie-section-title">
-          <i class="fa-solid fa-star"></i> <span>Popular Movies</span> 
-        </h2>
+        <div class="movie-section-title">
+          <h2><i class="fa-solid fa-star"></i> <span>Popular Movies</span></h2>
+          <h3 class="movie-list"></h3>
+        </div>
         <div class="movies"></div>
       </section>
     </main>
     <footer>
-      <p>Created by Ben and Ola, under CC License</p>
+      <p>Created by <a href="https://github.com/Benmuiruri" target="_blank" class="footer-link" rel="noopener">Ben</a> and <a href="https://github.com/olawalecoder" target="_blank" class="footer-link" rel="noopener">Ola</a>, under CC License</p>
     </footer>
   </body>
 </html>
