@@ -10,15 +10,14 @@ const isVisible = 'is-visible';
 const movieModal = async (commentButtons, sampleMovies) => {
   commentButtons.forEach((button, i) => {
     button.addEventListener('click', async () => {
-      // Create movie modal
       const modal = document.createElement('article');
       modal.className = 'modal';
-      // Create div inside modal
+
       const popUpDiv = document.createElement('div');
       popUpDiv.className = 'modal-dialog';
       modal.classList.add(isVisible);
       modal.appendChild(popUpDiv);
-      // Create image with buttons inside div
+
       const movieImgDiv = document.createElement('div');
       const movieImg = document.createElement('img');
       const buttonDiv = document.createElement('div');
@@ -38,7 +37,6 @@ const movieModal = async (commentButtons, sampleMovies) => {
       movieImgDiv.appendChild(buttonDiv);
       popUpDiv.appendChild(movieImgDiv);
 
-      // Create Movie Details inside div
       const movieContentDiv = document.createElement('div');
       const movieTitle = document.createElement('h1');
       const movieGenre = document.createElement('h2');
@@ -80,7 +78,6 @@ const movieModal = async (commentButtons, sampleMovies) => {
       movieContentDiv.appendChild(movieSummary);
       popUpDiv.appendChild(movieContentDiv);
 
-      // Close button
       const closeModalBtn = document.createElement('button');
       closeModalBtn.innerHTML = '';
       closeModalBtn.className = 'close-proj-modal';
@@ -103,10 +100,9 @@ const movieModal = async (commentButtons, sampleMovies) => {
       formIcon.classList.add('fa-message');
       formHeader.innerHTML = 'Add your comment';
       formHeaderDiv.append(formIcon, formHeader);
-      // Actual form
       const commentForm = document.createElement('form');
       commentForm.className = 'add-comment-form';
-      // Form elements
+
       const userName = document.createElement('input');
       userName.className = 'user-name';
       userName.placeholder = 'Username...';
@@ -120,7 +116,6 @@ const movieModal = async (commentButtons, sampleMovies) => {
       commentForm.append(userName, userComment, commentBtn);
       formDiv.append(formHeaderDiv, commentForm);
 
-      // Display comments
       const commentsDiv = document.createElement('div');
       commentsDiv.className = 'display-comments';
       const comments = await getComments(commentBtn.id);
@@ -128,9 +123,8 @@ const movieModal = async (commentButtons, sampleMovies) => {
       commentsCount.className = 'comments-count';
       commentsDiv.append(commentsCount);
       countComments(commentsCount, comments);
-      // Call display comments function
       displayComments(commentsDiv, comments);
-      // Comment button action
+
       commentBtn.addEventListener('click', async (e) => {
         const resMsg = document.createElement('span');
         if (userName.value === '' || userComment.value === '') {
@@ -141,7 +135,6 @@ const movieModal = async (commentButtons, sampleMovies) => {
           setTimeout(() => {
             commentForm.removeChild(resMsg);
           }, 2000);
-          // console.log(userName.value);
         } else {
           e.preventDefault();
           resMsg.className = 'success-msg';
@@ -160,7 +153,6 @@ const movieModal = async (commentButtons, sampleMovies) => {
 
       commentSection.append(formDiv, commentsDiv);
       popUpDiv.appendChild(commentSection);
-      // Read more button
       const readMore = document.createElement('button');
       readMore.innerHTML = 'Read More';
       readMore.className = 'readMoreBtn';
@@ -177,7 +169,6 @@ const movieModal = async (commentButtons, sampleMovies) => {
           )}......`;
         }
       });
-      // Add modal to body
       document.body.appendChild(modal);
       document.body.style.overflow = 'hidden';
     });
