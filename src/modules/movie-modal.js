@@ -87,6 +87,7 @@ const movieModal = async (commentButtons, sampleMovies) => {
       popUpDiv.appendChild(closeModalBtn);
       closeModalBtn.addEventListener('click', () => {
         modal.classList.remove('is-visible');
+        document.body.style.overflow = 'auto';
       });
 
       // Comments
@@ -97,8 +98,11 @@ const movieModal = async (commentButtons, sampleMovies) => {
       const formHeaderDiv = document.createElement('div');
       formHeaderDiv.className = 'add-comment-header';
       const formHeader = document.createElement('h2');
-      formHeader.innerHTML = '<span class="comment-icon"><i class="fa-solid fa-comment-dots"></i></span>Add your comment';
-      formHeaderDiv.appendChild(formHeader);
+      const formIcon = document.createElement('i');
+      formIcon.classList.add('fa-solid');
+      formIcon.classList.add('fa-message');
+      formHeader.innerHTML = 'Add your comment';
+      formHeaderDiv.append(formIcon, formHeader);
       // Actual form
       const commentForm = document.createElement('form');
       commentForm.className = 'add-comment-form';
@@ -175,6 +179,7 @@ const movieModal = async (commentButtons, sampleMovies) => {
       });
       // Add modal to body
       document.body.appendChild(modal);
+      document.body.style.overflow = 'hidden';
     });
   });
 };
