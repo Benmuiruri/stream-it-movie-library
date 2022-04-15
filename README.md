@@ -9,7 +9,9 @@
 
 <h1 align="center"> Stream-It </h1>
 
-> The website allows users to browse a list of movies, like a movie, view and add comments to a moview
+> The website allows users to browse a list of movies, like a movie, view and add comments to a movie
+
+
 
 ## Built With
 
@@ -19,6 +21,9 @@
 
 [LIVE DEMO LINK](benmuiruri.github.io/stream-it-capstone/
 )
+## Video Description
+
+- https://drive.google.com/file/d/1YSgEySc4y8TBjSsUmKJma8wksQKKW5Ii/view?usp=sharing
 
 ## Getting Started
 
