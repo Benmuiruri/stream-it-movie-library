@@ -33,6 +33,7 @@ html {
 
 a {
   text-decoration: none;
+  color: #fff;
 }
 
 /* Header Styles */
@@ -74,7 +75,6 @@ a {
   text-decoration: none;
   display: block;
   font-family: var(--header-font);
-  /* padding-bottom: 0.5em; */
   font-size: 2.5em;
   font-weight: bold;
 }
@@ -672,15 +672,17 @@ textarea:hover {
 /* Footer Styles */
 footer {
   margin-top: auto;
-  background: #c1c7d0b9;
+  background: #000;
 }
 
 footer p {
-  padding: 10px;
+  padding: 2em;
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1.3em;
+  color: #fff;
 }
 
-.test {
-  color: red;
+footer a {
+  color: var(--primary-green);
+  font-size: 1.1em;
 }
