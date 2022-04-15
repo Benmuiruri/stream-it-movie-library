@@ -6,6 +6,7 @@
   --header-font: 'Poppins', sans-serif;
   --body-font: 'Raleway', sans-serif;
 }
+
 body {
   min-height: 100vh;
   display: flex;
@@ -678,7 +679,7 @@ footer p {
   color: #fff;
 }
 
-footer a {
+.footer-link {
   color: var(--primary-green);
   font-size: 1.1em;
 }
@@ -690,44 +691,57 @@ footer a {
     grid-gap: 20px 20px;
     grid-template-columns: 100%;
   }
+
   #idform {
     display: none;
   }
+
   .buttonDiv {
     flex-direction: column;
   }
+
   .popUp-button {
     width: auto;
     font-size: 0.8em;
   }
+
   .popUp-title {
     font-size: 2em;
   }
+
   .subtitle-button {
     width: auto;
   }
+
   .movie-overlay-rating {
     font-size: 1.4em;
   }
+
   .popUp-summary {
     width: auto;
   }
+
   .modal-dialog {
     width: 85vw;
   }
+
   .comment-section {
     flex-direction: column;
     padding: 0;
   }
+
   .readMoreBtn {
     width: auto;
   }
+
   .movieContent {
     width: auto;
   }
+
   .comment-container {
     flex-direction: column;
   }
+
   .display-comments {
     width: auto;
   }
