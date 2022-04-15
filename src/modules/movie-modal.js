@@ -3,7 +3,7 @@ import {
   getComments,
   displayComments,
   countComments,
-} from './comments-handler';
+} from './comments-handler.js';
 
 const isVisible = 'is-visible';
 
@@ -69,7 +69,7 @@ const movieModal = async (commentButtons, sampleMovies) => {
       } else {
         movieRating.innerHTML = '0 / 10';
       }
-      movieSummary.innerHTML = `${sampleMovies[i].summary.substring(0, 200)}`;
+      movieSummary.innerHTML = `${sampleMovies[i].summary.substring(0, 200)}......`;
       movieSummary.className = 'popUp-summary';
       movieContentDiv.appendChild(movieTitle);
       movieContentDiv.appendChild(movieGenre);
@@ -97,7 +97,7 @@ const movieModal = async (commentButtons, sampleMovies) => {
       const formHeaderDiv = document.createElement('div');
       formHeaderDiv.className = 'add-comment-header';
       const formHeader = document.createElement('h2');
-      formHeader.textContent = 'Add your comment';
+      formHeader.innerHTML = '<span class="comment-icon"><i class="fa-solid fa-comment-dots"></i></span>Add your comment';
       formHeaderDiv.appendChild(formHeader);
       // Actual form
       const commentForm = document.createElement('form');
@@ -170,7 +170,7 @@ const movieModal = async (commentButtons, sampleMovies) => {
           movieSummary.innerHTML = `${sampleMovies[i].summary.substring(
             0,
             400,
-          )}`;
+          )}......`;
         }
       });
       // Add modal to body
