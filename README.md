@@ -2,7 +2,10 @@
 
 <p align="center">Desktop view</p>
 
-Project image coming soon.
+## Preview
+![Preview](./src/assets/streamdsktphmpage.png)
+![Preview](./src/assets/st-desk-1.png)
+![Preview](./src/assets/st-desk-2.png)
 
 <h1 align="center"> Stream-It </h1>
 
@@ -11,6 +14,11 @@ Project image coming soon.
 ## Built With
 
 - **HTML** and **CSS** and **Javascript**
+
+## DEMO
+
+[LIVE DEMO LINK](benmuiruri.github.io/stream-it-capstone/
+)
 
 ## Getting Started
 
