@@ -5,7 +5,7 @@ describe('Display number of comments', () => {
     const commentDiv = { textContent: '' };
     const comments = [];
     countComments(commentDiv, comments);
-    expect(commentDiv.textContent).toBe('O Comments');
+    expect(commentDiv.textContent).toBe('0 Comments');
   });
   test('should display 1 Comments', () => {
     const commentDiv = { textContent: '' };
