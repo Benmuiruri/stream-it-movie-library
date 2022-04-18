@@ -1,4 +1,4 @@
-import { countComments } from '../modules/comments-handler';
+import { countComments } from '../modules/display-comments';
 
 describe('Display number of comments', () => {
   test('should display 0 Comments', () => {
