@@ -86,6 +86,13 @@ const movieModal = async (commentButtons, sampleMovies) => {
         document.body.style.overflow = 'auto';
       });
 
+      document.addEventListener('keyup', (e) => {
+        if (e.key === 'Escape' && document.querySelector('.modal.is-visible')) {
+          modal.classList.remove('is-visible');
+          document.body.style.overflow = 'auto';
+        }
+      });
+
       // Comments
       const commentSection = document.createElement('section');
       commentSection.className = 'comment-section';
