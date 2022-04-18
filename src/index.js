@@ -21,5 +21,7 @@ window.addEventListener('load', async () => {
   movieList.innerHTML = `We currently have <span> ${countMovies(sampleMovies)} <span> movies`;
 
   const commentButtons = [...document.querySelectorAll('.commentBtn')];
+  const viewDetailsButtons = [...document.querySelectorAll('.ovelay-details-btn')];
   movieModal(commentButtons, sampleMovies);
+  movieModal(viewDetailsButtons, sampleMovies);
 });

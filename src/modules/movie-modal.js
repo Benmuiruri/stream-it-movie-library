@@ -1,5 +1,6 @@
 import { postComment, getComments } from './comments-handler.js';
 import { displayComments, countComments } from './display-comments.js';
+
 const isVisible = 'is-visible';
 
 const movieModal = async (commentButtons, sampleMovies) => {
