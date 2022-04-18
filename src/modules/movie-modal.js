@@ -1,10 +1,5 @@
-import {
-  postComment,
-  getComments,
-  displayComments,
-  countComments,
-} from './comments-handler.js';
-
+import { postComment, getComments } from './comments-handler.js';
+import { displayComments, countComments } from './display-comments.js';
 const isVisible = 'is-visible';
 
 const movieModal = async (commentButtons, sampleMovies) => {
@@ -67,7 +62,10 @@ const movieModal = async (commentButtons, sampleMovies) => {
       } else {
         movieRating.innerHTML = '0 / 10';
       }
-      movieSummary.innerHTML = `${sampleMovies[i].summary.substring(0, 200)}......`;
+      movieSummary.innerHTML = `${sampleMovies[i].summary.substring(
+        0,
+        200,
+      )}......`;
       movieSummary.className = 'popUp-summary';
       movieContentDiv.appendChild(movieTitle);
       movieContentDiv.appendChild(movieGenre);
