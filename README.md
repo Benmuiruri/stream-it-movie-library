@@ -1,8 +1,7 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-<p align="center">Desktop view</p>
-
 ## Preview
+<p align="center">Desktop view</p>
 ![Preview](./src/assets/streamdsktphmpage.png)
 ![Preview](./src/assets/st-desk-1.png)
 ![Preview](./src/assets/st-desk-2.png)
@@ -40,21 +39,23 @@ To get a local copy up and running follow these setup steps below.
 
 👤 **Authors**
 
-- GitHub: [@githubhandle](https://github.com/Benmuiruri) and [Olawale Bamidele](https://github.com/olawalecoder)
-- Twitter: [@twitterhandle](https://twitter.com/_optimize)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/benjamin-kiarie-180b66149/)
+- GitHub: [Ben Kiarie](https://github.com/Benmuiruri) and [Olawale Bamidele](https://github.com/olawalecoder)
+- Twitter: [Optimize](https://twitter.com/_optimize)
+- LinkedIn: [Ben Kiarie](https://www.linkedin.com/in/benjamin-kiarie-180b66149/)
 
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/Benmuiruri/to-do-list/issues).
+Feel free to check the [issues page](https://github.com/Benmuiruri/stream-it-capstone/issues).
 
 ## Show your support
 
 Give a ⭐️ if you like this project!
 
 ## Acknowledgments
+
+Huge thanks to everyone who helped us in any capacity to complete this project
 
 ## 📝 License
 

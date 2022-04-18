@@ -1,9 +1,5 @@
-import {
-  postComment,
-  getComments,
-  displayComments,
-  countComments,
-} from './comments-handler.js';
+import { postComment, getComments } from './comments-handler.js';
+import { displayComments, countComments } from './display-comments.js';
 
 const isVisible = 'is-visible';
 
@@ -67,7 +63,10 @@ const movieModal = async (commentButtons, sampleMovies) => {
       } else {
         movieRating.innerHTML = '0 / 10';
       }
-      movieSummary.innerHTML = `${sampleMovies[i].summary.substring(0, 200)}......`;
+      movieSummary.innerHTML = `${sampleMovies[i].summary.substring(
+        0,
+        200,
+      )}......`;
       movieSummary.className = 'popUp-summary';
       movieContentDiv.appendChild(movieTitle);
       movieContentDiv.appendChild(movieGenre);
@@ -85,6 +84,20 @@ const movieModal = async (commentButtons, sampleMovies) => {
       closeModalBtn.addEventListener('click', () => {
         modal.classList.remove('is-visible');
         document.body.style.overflow = 'auto';
+      });
+
+      document.addEventListener('keyup', (e) => {
+        if (e.key === 'Escape' && document.querySelector('.modal.is-visible')) {
+          modal.classList.remove('is-visible');
+          document.body.style.overflow = 'auto';
+        }
+      });
+
+      document.addEventListener('click', (e) => {
+        if (e.target === document.querySelector('.modal.is-visible')) {
+          modal.classList.remove('is-visible');
+          document.body.style.overflow = 'auto';
+        }
       });
 
       // Comments
