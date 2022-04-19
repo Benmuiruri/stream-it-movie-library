@@ -723,6 +723,10 @@ footer p {
 
   .modal-dialog {
     width: 85vw;
+    padding: 1em;
+    margin: 0.5em;
+    gap: 1em;
+    flex-basis: 90%;
   }
 
   .comment-section {
