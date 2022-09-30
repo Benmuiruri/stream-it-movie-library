@@ -1,8 +1,13 @@
 # example netlify.toml
 [build]
   command = "npm run build"
-  functions = "netlify/functions"
-  publish = "."
+  publish = "dist"
+
+[dev]
+  command = "yarn start"
+  targetPort = 3000
+  port = 8888
+  publish = "dist"
 
   ## Uncomment to use this redirect for Single Page Applications like create-react-app.
   ## Not needed for static site generators.
