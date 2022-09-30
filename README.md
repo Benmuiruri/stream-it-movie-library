@@ -18,11 +18,7 @@
 
 ## DEMO
 
-[LIVE DEMO LINK](benmuiruri.github.io/stream-it-capstone/
-)
-## Video Description
-
-- https://drive.google.com/file/d/1YSgEySc4y8TBjSsUmKJma8wksQKKW5Ii/view?usp=sharing
+[LIVE DEMO LINK](https://stream-it-movie-library.netlify.app/)
 
 ## Getting Started
 
@@ -39,7 +35,7 @@ To get a local copy up and running follow these setup steps below.
 
 👤 **Authors**
 
-- GitHub: [Ben Kiarie](https://github.com/Benmuiruri) and [Olawale Bamidele](https://github.com/olawalecoder)
+- GitHub: [Ben Kiarie](https://github.com/Benmuiruri)
 - Twitter: [Optimize](https://twitter.com/_optimize)
 - LinkedIn: [Ben Kiarie](https://www.linkedin.com/in/benjamin-kiarie-180b66149/)
 
@@ -47,7 +43,7 @@ To get a local copy up and running follow these setup steps below.
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/Benmuiruri/stream-it-capstone/issues).
+Feel free to check the [issues page](https://github.com/Benmuiruri/stream-it-movie-library/issues).
 
 ## Show your support
 
