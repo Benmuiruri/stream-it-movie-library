@@ -1,7 +1,7 @@
 {
-  "name": "stream-it-capstone",
+  "name": "stream-it-movie-library",
   "version": "1.0.0",
-  "description": "Javascript Capstone project built by [Ben Muiruri](https://github.com/Benmuiruri) and [Olawale Bamidele](https://github.com/olawalecoder)",
+  "description": "Javascript Movie library project built by [Ben Muiruri](https://github.com/Benmuiruri)",
   "private": "true",
   "scripts": {
     "test": "jest",
@@ -12,15 +12,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Benmuiruri/stream-it-capstone.git"
+    "url": "git+https://github.com/Benmuiruri/stream-it-movie-library.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Benmuiruri/stream-it-capstone/issues"
+    "url": "https://github.com/Benmuiruri/stream-it-movie-library/issues"
   },
-  "homepage": "https://github.com/Benmuiruri/stream-it-capstone#readme",
   "devDependencies": {
     "@babel/plugin-syntax-top-level-await": "^7.14.5",
     "@babel/plugin-transform-modules-commonjs": "^7.17.9",

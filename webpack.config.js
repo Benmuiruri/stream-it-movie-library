@@ -16,7 +16,7 @@ module.exports = {
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
-    publicPath: '/stream-it-capstone/',
+    publicPath: '/stream-it-movie-library/',
     assetModuleFilename: 'images/[hash][ext][query]',
     clean: true,
   },
