@@ -18,7 +18,7 @@
 
 ## DEMO
 
-[LIVE DEMO LINK](https://stream-it-movie-library.netlify.app/)
+[LIVE LINK](https://stream-it-movie-library.netlify.app/)
 
 ## Getting Started
 
